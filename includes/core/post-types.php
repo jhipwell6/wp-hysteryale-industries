@@ -16,7 +16,7 @@ class Post_Types
 			),
 			'config' => array(
 				'hierarchical' => true,
-				'has_archive' => false,
+				'has_archive' => 'industries',
 				'publicly_queryable' => true,
 				'supports' => array( 'title', 'editor', 'thumbnail' ),
 				'menu_icon' => 'dashicons-admin-tools',
@@ -27,8 +27,8 @@ class Post_Types
 	public static $taxonomies = array(
 		'industry_group' => array(
 			'labels' => array(
-				'singular' => 'Type',
-				'plural' => 'Types',
+				'singular' => 'Group',
+				'plural' => 'Groups',
 			),
 			'config' => array(
 				'publicly_queryable' => false,

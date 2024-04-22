@@ -23,7 +23,7 @@ if ( ! class_exists( 'WP_HYG_Industries' ) ) :
 		/**
 		 * @var string
 		 */
-		public $version = '0.5';
+		public $version = '0.1';
 
 		/**
 		 * @var string
@@ -92,7 +92,6 @@ if ( ! class_exists( 'WP_HYG_Industries' ) ) :
 		public function setup()
 		{
 			$this->includes();
-			$this->init_hooks();
 			$this->init_factories();
 		}
 
@@ -152,6 +151,7 @@ if ( ! class_exists( 'WP_HYG_Industries' ) ) :
 			// This is because cron actions hooked/defined in Controllers will fire as soon as the Controller is included and the add_action() with cron hook name is called.
 			// If the Controller uses a Model in the Cron action callback, that Model will NOT have been included yet.
 			// Controllers
+			include_once $this->plugin_path() . '/includes/controllers/hyg-industries-template.php';
 			include_once $this->plugin_path() . '/includes/controllers/hyg-industries-industry.php';
 			
 			if ( $this->is_request( 'admin' ) ) {
