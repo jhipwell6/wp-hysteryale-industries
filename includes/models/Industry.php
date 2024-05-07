@@ -7,7 +7,7 @@ use \WP_HYG_Industries\Models\Abstracts\Post_Model;
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
-class Promo extends Post_Model
+class Industry extends Post_Model
 {
 	const POST_TYPE = 'industry';
 	const UNIQUE_KEY = 'industry_id';
@@ -28,6 +28,7 @@ class Promo extends Post_Model
 	protected $image;
 	protected $industry_id;
 	private $url;
+	private $excerpt;
 	
 	/*
 	 * Getters
@@ -73,6 +74,14 @@ class Promo extends Post_Model
 			$this->url = get_permalink( $this->get_id() );
 		}
 		return $this->url;
+	}
+	
+	public function get_excerpt()
+	{
+		if ( null === $this->excerpt ) {
+			$this->excerpt = wp_trim_words( get_the_excerpt( $this->get_id() ), 15, '&hellip;' );
+		}
+		return $this->excerpt;
 	}
 	
 	/*

@@ -12,6 +12,7 @@ class HYG_Industries_Industry
 	public function __construct()
 	{
 		add_shortcode( 'hyg_industry_equipment_card', [ $this, 'industry_equipment_card_shortcode' ], 10, 1 );
+		add_shortcode( 'hyg_industry_card', [ $this, 'industry_card_shortcode' ], 10, 1 );
 	}
 
 	public static function instance()
@@ -31,6 +32,11 @@ class HYG_Industries_Industry
 		return '';
 	}
 
+	public function industry_card_shortcode()
+	{
+		$Industry = WP_HYG_Industries()->Industry();
+		return WP_HYG_Industries()->view( 'industry-card', [ 'Industry' => $Industry ] );
+	}
 }
 
 HYG_Industries_Industry::instance();

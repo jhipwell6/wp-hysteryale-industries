@@ -12,6 +12,7 @@ class HYG_Industries_Template
 	public function __construct()
 	{
 		add_filter( 'template_include', [ $this, 'template_loader' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_frontend_scripts' ], 9999 );
 	}
 
 	public static function instance()
@@ -36,6 +37,16 @@ class HYG_Industries_Template
 		}
 		
 		return $template;
+	}
+	
+	public function enqueue_frontend_scripts()
+	{		
+		wp_enqueue_style(
+			WP_HYG_INDUSTRIES_TEXT_DOMAIN . '-styles',
+			WP_HYG_Industries()->plugin_url() . '/assets/css/wp-hyg-industries-frontend.css',
+			array(),
+			filemtime( WP_HYG_Industries()->plugin_path() . '/assets/css/wp-hyg-industries-frontend.css' ),
+		);
 	}
 }
 

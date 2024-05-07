@@ -1,0 +1,120 @@
+.industry-feed .fl-post-feed {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.industry-feed .fl-post-feed-post {
+    border: none;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+	-webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+@media (min-width: 600px) {
+	.industry-feed .fl-post-feed-post {
+		width: 50%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.industry-feed .fl-post-feed-post {
+		width: 33.3333%;
+	}
+}
+
+.industry-feed .fl-post-feed-post:last-child {
+	margin-bottom: 30px !important;
+}
+
+.industry-card.card {
+	height: 100%;
+	background: none;
+	border: none;
+	border-radius: 0;
+	color: #ffffff;
+	text-align: center;
+}
+
+.industry-card--body {
+	background-color: rgba(0,0,0,0.45);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+}
+
+.industry-card:hover .industry-card--body {
+	background-color: rgba(0,0,0,0.8);
+}
+
+.industry-card--image {
+	border-radius: 0;
+	aspect-ratio: 1;
+	object-fit: cover;
+}
+
+.industry-card--title {
+	text-transform: uppercase;
+	color: inherit;
+	font-size: 32px;
+}
+
+.industry-card--title::after {
+    content: "";
+    display: block;
+    margin: 0 auto 15px;
+    width: 100px;
+    border-bottom: 5px solid #9e1c20;
+}
+
+.industry-card--text {
+	-webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    opacity: 0;
+    position: absolute;
+    bottom: -500px;
+    width: 100%;
+    left: 0;
+}
+
+.industry-card:hover .industry-card--text {
+	opacity: 1;
+    bottom: 0;
+    position: relative;
+    left: auto;
+}
+
+.industry-card--button {
+	display: inline-block;
+	width: 170px;
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 14px;
+    padding-left: 20px;
+    border-style: none;
+    border-width: 0;
+    background-clip: border-box;
+	background-color: #fec422;
+    color: #000000 !important;
+	font-weight: 700;
+    font-size: 13px;
+    line-height: 1;
+	text-transform: uppercase;
+}
