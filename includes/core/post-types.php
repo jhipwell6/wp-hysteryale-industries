@@ -18,7 +18,7 @@ class Post_Types
 				'hierarchical' => true,
 				'has_archive' => 'industries',
 				'publicly_queryable' => true,
-				'supports' => array( 'title', 'editor', 'thumbnail' ),
+				'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt' ),
 				'menu_icon' => 'dashicons-admin-tools',
 			),
 		),

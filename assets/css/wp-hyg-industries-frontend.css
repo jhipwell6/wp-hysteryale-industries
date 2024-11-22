@@ -118,3 +118,55 @@
     line-height: 1;
 	text-transform: uppercase;
 }
+
+/*
+ * Template
+ */
+
+.ctabs .uabb-tabs-layout-vertical{display:-ms-flexbox;display:flex;}
+.ctabs .uabb-tabs-layout-vertical .uabb-tabs-nav{width:170px;min-width:170px;background-color:#1c1d1f}
+.ctabs .uabb-tabs-layout-vertical .uabb-tabs-nav li{border-bottom:2px solid #d7d7d8}
+.ctabs .uabb-tabs-layout-vertical .uabb-tab-acc-title{border-bottom:2px solid #d7d7d8}
+.ctabs .uabb-tabs-layout-vertical .uabb-tabs-nav li:last-child{border-bottom:0}
+.ctabs .uabb-tabs-layout-vertical .uabb-content-wrap{width:100%;}
+.ctabs .uabb-tabs-layout-vertical .uabb-content-wrap .uabb-tab-acc-content{min-height:inherit !important;}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content{display:-ms-flexbox;display:flex;}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img{width:55%;background-color:#000000}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img p{margin:0}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:25px;margin-bottom:auto;margin-top:auto;}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img label{font-size:20px !important;font-weight:400 !important;margin-right: 20px;line-height: 1 !important;padding:0;margin:0;color:#fff !important;font-family:"Bebas Neue", sans-serif}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img ._btn{width:245px;text-align:center;padding:15px 20px 14px 20px;background-color:#fec422;color:#000;font-family:"Bebas Neue", sans-serif;font-size:16px !important;line-height:1 !important;}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img img{width:100%;height:auto}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._details{padding:45px;width:45%}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._details h2{font-family:"Bebas Neue", sans-serif !important;line-height:1.2;margin:0 0 25px}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._details h2:after{content:"";display:block;width:100px;border-bottom:5px solid #9e1c20;margin-top:15px;}
+
+.c_list_square{list-style:none;margin:20px 0;padding:0}
+.c_list_square li{padding-left:25px;position:relative;}
+.c_list_square li:before{content:"";position:absolute;top:8px;left:0;width:8px;height:8px;background-color:#9E1C20}
+
+        
+@media(max-width:991px){
+    .ctabs .uabb-tabs-layout-vertical .ctabs_content{display:block;}
+    .ctabs .uabb-tabs-layout-vertical .ctabs_content ._img{width:auto}
+    .ctabs .uabb-tabs-layout-vertical .ctabs_content ._details{padding:45px;width:auto}
+}
+
+.ccta .uabb-infobox{padding:0;margin-top:60px;margin-left:55px;}
+.ccta .uabb-infobox .uabb-imgicon-wrap{margin:-55px 0 0 -55px}
+.ccta .uabb-infobox .uabb-infobox-left-right-wrap{display:-ms-flexbox;display:flex;}
+.ccta .uabb-infobox .uabb-infobox-content{padding:55px 55px 85px 55px;}
+
+@media(max-width:1199px){
+	.ccta .uabb-infobox .uabb-infobox-content{padding-right:0}
+}
+@media(max-width:991px){
+	.ccta .uabb-infobox .uabb-infobox-left-right-wrap{display:block}
+	.ccta .uabb-infobox .uabb-imgicon-wrap{float: none;width: auto;display: block;}
+	.ccta .uabb-infobox .uabb-infobox-content{width: auto !important;padding: 45px;float:none}
+}
+@media(max-width:767px){
+	.ccta .uabb-infobox{margin-top:30px;margin-left:30px;}
+	.ccta .uabb-infobox .uabb-imgicon-wrap{margin:-30px 30px 0 -30px}
+	.ccta .uabb-infobox .uabb-infobox-content{padding: 30px;}
+}

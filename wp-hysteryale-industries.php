@@ -4,7 +4,7 @@
  * Plugin Name: HysterYale Industries Integration
  * Plugin URI: https://hysteryale.com/
  * Description: WP HysterYale Industries Plugin
- * Version: 0.7
+ * Version: 0.8
  * Author: WebFX
  * Author URI: https://webfx.com/
  * GitHub Plugin URI: jhipwell6/wp-hysteryale-industries
@@ -23,7 +23,7 @@ if ( ! class_exists( 'WP_HYG_Industries' ) ) :
 		/**
 		 * @var string
 		 */
-		public $version = '0.7';
+		public $version = '0.8';
 
 		/**
 		 * @var string
