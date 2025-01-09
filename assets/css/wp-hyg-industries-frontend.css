@@ -136,7 +136,7 @@
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img{display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:25px;margin-bottom:auto;margin-top:auto;}
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img label{font-size:20px !important;font-weight:400 !important;margin-right: 20px;line-height: 1 !important;padding:0;margin:0;color:#fff !important;font-family:"Bebas Neue", sans-serif}
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._img ._foot_img ._btn{width:245px;text-align:center;padding:15px 20px 14px 20px;background-color:#fec422;color:#000;font-family:"Bebas Neue", sans-serif;font-size:16px !important;line-height:1 !important;}
-.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img img{width:100%;height:auto}
+.ctabs .uabb-tabs-layout-vertical .ctabs_content ._img img{width:100%;height:auto;margin:0}
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._details{padding:45px;width:45%}
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._details h2{font-family:"Bebas Neue", sans-serif !important;line-height:1.2;margin:0 0 25px}
 .ctabs .uabb-tabs-layout-vertical .ctabs_content ._details h2:after{content:"";display:block;width:100px;border-bottom:5px solid #9e1c20;margin-top:15px;}
