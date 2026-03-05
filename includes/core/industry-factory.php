@@ -1,34 +1,39 @@
 <?php
+
 namespace WP_HYG_Industries\Core;
 
-if ( ! defined('ABSPATH') )
-    exit;
+if ( ! defined( 'ABSPATH' ) )
+	exit;
 
 class Industry_Factory extends Abstracts\Factory
 {
-    private $found = array();
-	
-    /**
-     * Get an item from the collection by key.
-     *
-     * @param  mixed  $key
-     * @param  mixed  $default
-     * @return mixed
-     */	
+	private $found = array();
+
+	/**
+	 * Get an item from the collection by key.
+	 *
+	 * @param  mixed  $key
+	 * @param  mixed  $default
+	 * @return mixed
+	 */
 	public function get( $Industry = false, $default = null )
-    {		
+	{
 		$industry_id = $this->get_industry_id( $Industry );
-		if ( $industry_id && $this->contains( 'id', $industry_id ) && $industry_id != 0 && ! in_array( $industry_id, $this->found ) ) {
+
+		if ( $industry_id && $this->contains( 'id', $industry_id ) && $industry_id != 0 && ! in_array( $industry_id, $this->found, true ) ) {
+
 			$this->found[] = $industry_id;
-            return $this->where( 'id', $industry_id );
-        }
-		
+
+			return $this->firstWhere( 'id', $industry_id );
+		}
+
 		$Industry = new \WP_HYG_Industries\Models\Industry( $industry_id );
+
 		$this->add( $Industry );
-		
-        return $this->last();
-    }
-	
+
+		return $Industry;
+	}
+
 	/**
 	 * Get the industry ID depending on what was passed.
 	 *
